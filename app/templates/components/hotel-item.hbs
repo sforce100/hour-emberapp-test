@@ -1,6 +1,6 @@
 {{yield}}
 <li>
-    <a class="hotel_item full-house" href="javascript:void(0)">
+  {{#link-to 'hotels.detail' hotel.id class='hotel_item full-house'}}
     <div class="col-xs-3">
       <img src="{{hotel.photo}}" height="70" width="70">
     </div>
@@ -45,5 +45,5 @@
     </div>
 
     <div class="clearfix"></div>
-  </a>
+  {{/link-to}}
 </li>

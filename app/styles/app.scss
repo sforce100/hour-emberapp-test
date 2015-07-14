@@ -2,9 +2,12 @@
 @import "hotels";
 @import "orders";
 @import "sessions";
-// @import "common/*";
+// @import "common/scroll";
+// @import "common/select-modal";
 @import "hotels/search";
 @import "hotels/index";
+@import "hotels/show";
+@import "hotels/detail";
 
 a {
   color: black;

@@ -11,13 +11,13 @@ Router.map(function() {
     this.route('city');
     this.route('region', {queryParams: ['city_code']});
     this.route('list');
+    this.route('detail', {path: "/:hotel_id"});
     this.resource('filter', function () {
       this.route('date');
       this.route('brand');
       this.route('region');
     });
   });
-
 });
 
 Router.IndexRoute = Ember.Route.extend({

@@ -4,6 +4,9 @@ import Ember from 'ember';
 export default ApplicationAdapter.extend({
   find: function(store, type, query) {
     console.log('adapter hotel');
+    console.log('adapter hotel: '+this.buildURL(type.typeKey));
+    console.log('adapter hotel query: '+Ember.$.param(query));
+
     var url = this.buildURL(type.typeKey), 
         proc = 'GET', 
         obj = { data: query },
