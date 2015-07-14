@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'rujia-hotel',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/perfix',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -12,10 +12,22 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    API: {
+      Host: 'http://localhost:3000'
+    },
+    // https://github.com/rwjblue/ember-cli-content-security-policy#options
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' http://localhost:4200",
+      'font-src': "'self'",
+      'connect-src': "'self' http://localhost:3000",
+      'img-src': "'self' http://image-homeinn.b0.upaiyun.com",
+      'style-src': "'self'",
+      'media-src': "'self'"
     }
   };
 
