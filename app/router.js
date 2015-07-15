@@ -18,6 +18,8 @@ Router.map(function() {
       this.route('region');
     });
   });
+  this.route('login');
+  this.route('protected');
 });
 
 Router.IndexRoute = Ember.Route.extend({
